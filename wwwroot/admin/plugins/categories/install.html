@@ -1,0 +1,53 @@
+<!-- CVS: $Id: install.html,v 1.3 2007/03/28 22:09:29 nkd Exp $ -->
+Install/Uninstall instruction for the Geeklog Games plugin.
+<br><br>
+
+INSTALL:
+<br><br>
+
+Step 1:  Back up your Geeklog Database.  The Games plugin adds tables to your Geeklog database.  You can do
+this with the built in admin backup facility.
+<br><br>
+
+Step 2:  Uncompress the Games plugin archive while in the <geeklog_dir>/plugins directory.  The archive will
+create a directory called Games in the plugins directory.
+<br><br>
+
+Step 3:  Create the public_html and admin directories.  Under your html directory (usually public_html)
+create a directory called Games.  Under your admin/plugins/ directory create a directory called Games.
+<br><br>
+
+Step 4:  Change to your <geeklog_dir>/plugins/games/ directory.  Copy the files in the admin directory
+to the admin/plugins/games/ directory your created in step 3.  Copy the files and directories in the
+public_html directory to the public_html/games/ directory your created in step 3.
+<br><br>
+
+Step 5:  Edit the config.php in the Games directory and confirm the table prefix and anonymous access
+settings and other display settings.  The default is to use the geeklog table prefix and not allow
+anonymous access.
+<br><br>
+
+
+Step 6:  Log in to your Geeklog as a root user and run install.php in your admin/plugins/games/ directory.
+The install page will tell you if the install was successful or not.  If not examine Geeklog system errorlog
+for possible problems.
+<br><br>
+
+
+The Games plugin should now be installed and functioning.  Clicking on the Games Icon will
+take you to the admin page.
+<br><br>
+
+Step 7: Set up security.  On install only the root users have access to Games administration and Viewing.
+You can delegate control for either of these functions through the user and group editors.
+<br><br>
+
+UNINSTALL:
+<br><br>
+Step 1:  Run the install.php page in your admin/plugins/Games directory.  This will remove all the data from
+your database.
+<br><br>
+Step 2:  Delete the three plugin directories created in the install process:  <geeklog-dir>plugins/games/
+<public_html>/games/ and <admin>/plugins/games/
+<br><br>
+Thats it.
